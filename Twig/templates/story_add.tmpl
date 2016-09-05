@@ -1,0 +1,53 @@
+{% block layout %}
+
+{% embed 'main.tmpl' %}
+
+{%block include_resource%}
+<script src="js/story_add.js"></script>
+{%endblock%}
+
+{% block title_page%}
+Add story
+{% endblock%}
+
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <label class="control-label col-sm-2">Title:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="story_title" placeholder="Enter story title">
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Description</label>
+                            <div class="col-sm-10">
+                                <textarea id="story_description" class="form-control" placeholder="Story description"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                                                    <label class="control-label col-sm-2">Attachment</label>
+                                                    <div class="col-sm-10">
+                                                        <input id="story_file" type="file">
+                                                    </div>
+                                                </div>
+
+
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button id="btn_add_story" type="submit" class="btn btn-default">Add story</button>
+                          </div>
+                        </div>
+                      </form>
+                  </div>
+</div>
+
+{% endblock%}
+
+{% endembed %}
+
+{%endblock%}
