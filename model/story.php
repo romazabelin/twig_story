@@ -1,5 +1,5 @@
 <?php
-include_once 'model_interface_story.php';
+include_once 'story_interface.php';
 
 class Model_Story implements Model_Interface {
     const dir_attachment = "attachment";

@@ -1,3 +1,3 @@
 <?php
-include_once 'model/model_database.php';
-include_once 'model/model_story.php';
+include_once 'model/database.php';
+include_once 'model/story.php';
