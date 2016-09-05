@@ -6,8 +6,8 @@ $page = ($_GET['page']) ? (int)$_GET['page'] : 1;
 $flagIsNumber = is_int($page);
 $count_item_page = 2;
 $from = ($page) ? ($page - 1) * $count_item_page : 0;
-$list_stories = ($flagIsNumber) ? Model_Database::getListStories($from, $count_item_page) : array();
-$total_count_page = ceil(count(Model_Database::getListStories()) / $count_item_page);
+$list_stories = ($flagIsNumber) ? database::getListStories($from, $count_item_page) : array();
+$total_count_page = ceil(count(database::getListStories()) / $count_item_page);
 
 $template = $twig->loadTemplate('story_list.tmpl');
 

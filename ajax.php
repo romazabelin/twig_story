@@ -1,7 +1,7 @@
 <?php
 include_once 'include_files.php';
 
-$model_story = new Model_Story();
+$model_story = new story();
 $act = $_POST['act'];
 
 switch($act) {

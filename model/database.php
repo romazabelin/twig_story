@@ -1,6 +1,6 @@
 <?php
 
-class Model_Database {
+class database {
     const host = 'localhost';
     const user = 'mysql';
     const pass = 'mysql';

@@ -1,7 +1,7 @@
 <?php
 include_once 'story_interface.php';
 
-class Model_Story implements Model_Interface {
+class story implements story_interface {
     const dir_attachment = "attachment";
 
     public function addStory($story_title, $story_description) {
@@ -36,7 +36,7 @@ class Model_Story implements Model_Interface {
         }
 
         if ($flagValid) {
-            $story_id = Model_Database::addStory($story_title, $story_description);
+            $story_id = database::addStory($story_title, $story_description);
             if ($story_id) {
                 $story_folder = self::dir_attachment . "/" . $story_id;
                 (!file_exists(self::dir_attachment)) ? mkdir(self::dir_attachment) : false;
@@ -62,10 +62,10 @@ class Model_Story implements Model_Interface {
     }
 
     public function updateStoryAttachment($id, $attachment, $original_file_name) {
-        Model_Database::updateStoryAttachment($id, $attachment, $original_file_name);
+        database::updateStoryAttachment($id, $attachment, $original_file_name);
     }
 
     public function getListStories() {
-        return Model_Database::getListStories();
+        return database::getListStories();
     }
 }
